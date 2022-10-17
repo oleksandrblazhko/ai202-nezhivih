@@ -2,14 +2,10 @@
 title Classes Diagram
 
 Class User
-Class Online_order
 Class API_info
 Class Info_housing
-Class Recommendations
 
-User"+" -up-> "+"API_info : review
-User"1" -up-> "+"Online_order : shape
+User"+" -> "+"API_info : review
 User"+" -up-> "+"Info_housing : receive
 API_info"1" -up-> "+"Info_housing : provide
-Info_housing"+" -up-> "+"Recommendations : provide
 @enduml
