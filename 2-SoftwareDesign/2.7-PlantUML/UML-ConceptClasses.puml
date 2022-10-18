@@ -1,0 +1,11 @@
+@startuml
+title Classes Diagram
+
+Class User
+Class API_info
+Class Info_housing
+
+User"+" -> "+"API_info : review
+User"+" -up-> "+"Info_housing : receive
+API_info"1" -up-> "+"Info_housing : provide
+@enduml

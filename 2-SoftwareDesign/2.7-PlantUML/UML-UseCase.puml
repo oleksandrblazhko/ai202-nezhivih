@@ -1,0 +1,23 @@
+@startuml 
+title Usecase for Information system
+left to right direction
+skinparam packageStyle rect
+actor Consumer_painter
+actor User
+actor Employee_of_agency
+actor Service_Epay
+rectangle Software {
+  User -- (Authorization)
+  Consumer_painter -- (Draw up a contract)
+  Consumer_painter --|> User
+  (Draw up a contract) <-- Employee_of_agency
+  (Find a new home in a picturesque location) --> Employee_of_agency
+  (Pay for housing) -- Employee_of_agency
+  (E-payment) -- Service_Epay
+  
+  (Authorization) <.. (Draw up a contract) : <<include>>
+  (Authorization) <.. (Find a new home in a picturesque location) : <<include>>
+  (Authorization) <.. (Pay for housing) : <<include>>
+  (Pay for housing) <.. (E-payment) : <<extend>>
+}
+@enduml

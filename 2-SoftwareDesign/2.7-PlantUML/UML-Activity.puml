@@ -1,0 +1,14 @@
+@startuml
+title Conditional - Activity Diagram 
+
+start
+:The user pays for housing;
+:The program analyzes the payment;
+if (Was the payment successful?) then (Yes)
+  :Payment was successful!;
+else (No)
+  :Error!;
+endif
+stop
+
+@enduml

@@ -1,0 +1,51 @@
+@startuml
+title Relation Schema
+hide circle
+entity "User" as us {
+  (PK)user_id
+  --
+  fullname
+  age
+  phone
+  email
+  proto_user
+}
+
+entity "User_API" as ua {
+  (PK)user_api_id
+  --
+  (FK)user_id
+  (FK)api_id
+}
+
+entity "Info_API" as ia {
+  (PK)api_id
+  --
+  region
+  humidity
+}
+
+entity "User_dwelling" as ud {
+  (PK)user_dwelling_id
+  --
+  (FK)user_id
+  (FK)dwelling_id
+}
+
+entity "Info_dwelling" as id {
+  (PK)dwelling_id
+  --
+  adress
+  price
+  photo_dwelling
+  description
+  (FK)api_id
+}
+
+us --{ ua
+ua }-- ia
+us --{ ud
+ud }-- id
+ia --{ id
+
+@enduml
