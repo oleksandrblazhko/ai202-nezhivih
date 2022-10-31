@@ -30,7 +30,7 @@ CREATE OR REPLACE TYPE Information_API AS OBJECT (
 CREATE OR REPLACE TYPE Online_order AS OBJECT ( 
 	order_id NUMBER(5), -- id 
 	text VARCHAR(20), -- текст
-  date_order DATE, -- дата
+  	date_order DATE, -- дата
 	user_id NUMBER(5) -- fk
   /* конструктор екземплярів об'єктів класів.
        	Вхідні параметри:
