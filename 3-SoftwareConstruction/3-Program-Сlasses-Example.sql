@@ -20,7 +20,7 @@ CREATE OR REPLACE TYPE Information_API AS OBJECT (
 	api_id NUMBER(5), -- id 
 	region VARCHAR(10), -- регіон
 	humidity VARCHAR(10) -- вологість
-  date DATE, -- дата 
+  	date DATE, -- дата 
   /* Процедура виводу на екран значень атрибутів */
   MEMBER PROCEDURE display
 ); 
