@@ -11,18 +11,6 @@ CREATE OR REPLACE TYPE BODY Online_order AS
     CONSTRUCTOR FUNCTION Online_order(p_date_order DATE)
         RETURN SELF AS RESULT,
     IS
-		/* Процедура зміни значення атрибутів */
-		MEMBER PROCEDURE set_date_order(p_order_id NUMBER, p_date_order DATE),
-    		/* Функції отримання значень атрибутів */
-		MEMBER FUNCTION get_order_id RETURN NUMBER,
-		MEMBER FUNCTION get_date_order RETURN DATE,
-    	/* Процедура виводу на екран значень атрибутів */
-    	MEMBER PROCEDURE display
-);
-/
-
-
-
         v_order_id Online_order.order_id%TYPE;
     BEGIN
         SELECT order_id INTO v_order_id
